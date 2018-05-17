@@ -1,0 +1,12 @@
+xquery version "1.0-ml";
+
+(: create a document :)
+xdmp:document-insert("/example.xml",
+    <a/>);
+
+(: insert an attribute as child of a :)
+  xdmp:node-insert-child(doc("/example.xml")/a,
+    attribute b { "testnode" });
+
+(: look at the new document :)
+fn:doc("/example.xml")
