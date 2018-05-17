@@ -1,0 +1,10 @@
+xdmp:document-load("D:/student.xml",
+    <options xmlns="xdmp:document-load">
+      <uri>/D:/student.xml</uri>
+      <repair>none</repair>
+      <permissions>{xdmp:default-permissions()}</permissions>
+      <metadata>{
+        map:map() => map:with("h", "hello")
+                  => map:with("w", "world")
+      }</metadata>
+    </options>)
