@@ -4,12 +4,16 @@ xquery version "1.0-ml";
 for $i in 8 to 16
 return $i*$i
 
+
+
 •	Arrange the given input sequence in ascending order {67,89,45,78,23,45,22,90,1,24}
 xquery version "1.0-ml";
 
 for $i in (67,89,45,78,23,45,22,90,1,24)
 order by $i ascending
 return $i
+
+
 
 •	Deleting all the documents whose name starts with ‘book’
 xquery version "1.0-ml";
@@ -26,6 +30,10 @@ xdmp:document-insert("/book/journal/book.xml", <student>
 for $uri in cts:uri-match("/book*.xml")
 return xdmp:document-delete($uri)
 
+
+
+
+
 •	Form Fibonacci series using FLOWR expressions
 
 xquery version "1.0-ml";
@@ -37,6 +45,10 @@ then 0
 else if ($n =1)
 then 1
 else (($n - 1) + ($n - 2))
+
+
+
+
 •	Loading a document to ML (load documents from your D: drive)
 xdmp:document-load("D:/student.xml",
     <options xmlns="xdmp:document-load">
@@ -48,6 +60,13 @@ xdmp:document-load("D:/student.xml",
                   => map:with("w", "world")
       }</metadata>
     </options>)
+
+
+
+
+
+
+
 •	Inserting documents to ML (through query console)
 xquery version "1.0-ml";
 xdmp:document-insert("books.xml",
