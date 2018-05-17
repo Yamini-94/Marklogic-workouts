@@ -1,0 +1,13 @@
+xquery version "1.0-ml";
+xdmp:document-insert("/bookfirst/journal/studentbook.xml", <student>
+<id>1</id>
+<name>Hello World </name>
+</student>);
+
+xdmp:document-insert("/book/journal/book.xml", <student>
+<id>1</id>
+<name>Hello World book </name>
+</student>)
+
+for $uri in cts:uri-match("/book*.xml")
+return xdmp:document-delete($uri)
