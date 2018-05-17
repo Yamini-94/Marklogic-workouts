@@ -1,0 +1,5 @@
+xquery version "1.0-ml";
+
+for $i in (67,89,45,78,23,45,22,90,1,24)
+order by $i ascending
+return $i
