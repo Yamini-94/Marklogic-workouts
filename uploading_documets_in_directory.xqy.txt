@@ -1,0 +1,19 @@
+xquery version "1.0-ml";
+
+
+xdmp:document-insert("/repo/school/student/student1.xml",
+<student>
+<id>1</id>
+<name>aaa</name>
+</student>);
+xdmp:document-insert("/repo/school/management/management1.xml",
+<management>
+<id>1</id>
+<name>bbb</name>
+</management>);
+
+xdmp:document-insert("/repo/school/staff/staff1.xml",
+<staff>
+<id>1</id>
+<name>ccc</name>
+</staff>);
