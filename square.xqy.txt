@@ -1,0 +1,4 @@
+xquery version "1.0-ml";
+
+for $i in 8 to 16
+return $i*$i
